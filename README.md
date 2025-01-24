@@ -1,66 +1,91 @@
-# YouTube Video Downloader Web App  
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?text=YouTube%20Downloader&animation=fadeIn&type=soft&color=gradient&height=150"/>
+</p>
 
-This project is a **YouTube Video Downloader Web Application** built using the **FastAPI framework**. It allows users to input a YouTube video URL and download the video directly into their downloads folder.  
+### This project is a YouTube video downloader web application built using the FastAPI framework. It allows users to input a YouTube video URL and download the video in the available formats. This README.md file provides an overview of the project, installation instructions, usage guide, and potential areas for improvement.
 
-⚠️ **Note**: Downloading copyrighted content from YouTube without proper authorization may violate YouTube's terms of service and copyright laws. This project is intended for educational purposes and personal use only. Please respect the rights of content creators and adhere to all applicable laws.  
+⚠️ **Note:** Downloading copyrighted content from YouTube without proper authorization may violate YouTube's terms of service and copyright laws. This project is meant for educational purposes and personal use only. Be sure to respect the rights of content creators and follow all applicable laws.
 
----
+## 🚀 Features 
 
-## 🚀 Features  
+🎉 Input a valid YouTube video URL.
 
-- 🎉 Input a valid YouTube video URL.  
-- ⬇️ Automatically download the video into the user's downloads folder.  
-- 🛠️ Simple and easy-to-use interface with minimal setup.  
+📺 Choose from a list of available formats.
 
----
+🔽️ Download the selected video to your local machine.
 
-## ⚙️ Installation  
+## ⚙️ Installation 
 
-Follow these steps to set up and run the YouTube Video Downloader:  
+Follow these steps to set up and run the YouTube Video Downloader:
 
-1. **Clone the repository:**  
+1. Clone the repository:
+
    ```bash
-   git clone https://github.com/your-username/youtube-video-downloader.git
+   git clone https://github.com/YourUsername/YouTube-Downloader-In-FastAPI.git
+   ```
 
+2. Navigate to the project directory:
 
-2. **Navigate to the project directory:**
-cd youtube-video-downloader
+   ```bash
+   cd YouTube-Downloader-In-FastAPI
+   ```
 
-3. **Create a virtual environment:**
-python3 -m venv env
-Activate the virtual environment:
+3. Create a virtual environment:
 
-4. **On Windows:**
-env\Scripts\activate
+   ```bash
+   python3 -m venv env
+   ```
 
-  On macOS and Linux:
+4. Activate the virtual environment:
+   - On Windows:
+     ```bash
+     env\Scripts\activate
+     ```
+   - On macOS and Linux:
+     ```bash
+     source env/bin/activate
+     ```
 
-  source env/bin/activate
-  
-5. **Install required dependencies:**
-stall -r requirements.txt
+5. Install required dependencies:
 
-6. **Run the FastAPI application:**
-uvicorn main:app --reload
-Access the application:
-Open a web browser and navigate to http://127.0.0.1:8000 to use the YouTube Video Downloader.
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## 📝 Usage
-Enter a valid YouTube video URL in the input field.
-Click the "Download" button.
-The video will be downloaded to the downloads folder specified in the code.
-## 🤝 Contributing
+6. Run the FastAPI application:
+
+   ```bash
+   uvicorn main:app --reload
+   ```
+
+7. Open a web browser to `http://127.0.0.1:8000` to access the application.
+
+## 🖋️ Usage 
+
+1. Enter a valid YouTube video URL in the input field.
+2. Select the desired format (e.g., mp4 or mp3).
+3. Click the "Download" button and wait for the video to download.
+4. The file will be saved to your default download location.
+
+## 🙎 Contributing 
+
 Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
 
-Fork the repository.
-Create a new branch for your feature or bug fix.
-Make your changes and test them thoroughly.
-Submit a pull request explaining your changes.
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and test them thoroughly.
+4. Submit a pull request explaining your changes.
 
-## 🌟 Future Scope
-Here are some potential areas for future improvements:
+## 🌟 Improvements 
 
-**User Interface:** Enhance the design with HTML and CSS to make it more visually appealing and user-friendly.\n
-**Error Handling:** Add better error messages for invalid URLs or download failures.\n
-**Download Progress:** Show real-time progress to users during the download process.\n
-**Support for Other Platforms:** Extend functionality to allow video downloads from other video streaming platforms like Vimeo or Dailymotion.
+Here are some potential areas for improvement in the project:
+
+- [ ] **User Interface**: Enhance the user interface to make it more intuitive and visually appealing using modern web design practices.
+
+- [ ] **Error Handling**: Implement better error handling for cases where the provided URL is invalid or the video format is not supported.
+
+- [ ] **Download Progress**: Provide real-time download progress to the user.
+
+- [ ] **Support for Other Platforms**: Extend the application's functionality to support video downloads from other platforms.
+
+---
