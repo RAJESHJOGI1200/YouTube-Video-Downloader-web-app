@@ -60,7 +60,7 @@ Submit a pull request explaining your changes.
 ## 🌟 Future Scope
 Here are some potential areas for future improvements:
 
-**User Interface:** Enhance the design with HTML and CSS to make it more visually appealing and user-friendly.
-**Error Handling:** Add better error messages for invalid URLs or download failures.
-**Download Progress:** Show real-time progress to users during the download process.
+**User Interface:** Enhance the design with HTML and CSS to make it more visually appealing and user-friendly.\n
+**Error Handling:** Add better error messages for invalid URLs or download failures.\n
+**Download Progress:** Show real-time progress to users during the download process.\n
 **Support for Other Platforms:** Extend functionality to allow video downloads from other video streaming platforms like Vimeo or Dailymotion.
