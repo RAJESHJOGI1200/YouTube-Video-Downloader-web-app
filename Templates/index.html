@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Downloader</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script>
+        async function downloadVideo(event) {
+            event.preventDefault();
+
+            const videoUrl = document.getElementById("videoUrl").value;
+            const response = await fetch("/download", {
+                method: "POST",
+                body: new URLSearchParams({ video_url: videoUrl })
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                document.getElementById("message").innerText = result.message;
+                document.getElementById("downloadLink").innerHTML = `<a href="${result.file_path}" target="_blank">Download Link</a>`;
+            } else {
+                const error = await response.json();
+                document.getElementById("message").innerText = `Error: ${error.detail}`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Video Downloader</h1>
+        <form id="downloadForm" onsubmit="downloadVideo(event)">
+            <label for="videoUrl">Enter Video URL:</label>
+            <input type="text" id="videoUrl" name="video_url" required placeholder="https://youtu.be/...">
+            <button type="submit">Download</button>
+        </form>
+        <p id="message"></p>
+        <p id="downloadLink"></p>
+
+        <div class="about-section">
+            <h2>About This Project</h2>
+            <p>This application allows users to download videos from YouTube easily and quickly. You simply need to provide the video URL, and the app will handle the rest!</p>
+        </div>
+
+        <div class="features-section">
+            <h2>Features</h2>
+            <ul>
+                <li><img src="/static/icons/download.svg" alt="Download Icon"> Fast and easy video downloading</li>
+                <li><img src="/static/icons/format.svg" alt="Format Icon"> Supports various video formats</li>
+                <li><img src="/static/icons/share.svg" alt="Share Icon"> Easy sharing options after download</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
